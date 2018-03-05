@@ -6,7 +6,6 @@ public class Hacker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
         ShowMainMenu("Hello, Sombra");
     }
 
@@ -21,9 +20,9 @@ public class Hacker : MonoBehaviour {
         Terminal.WriteLine("");
         Terminal.WriteLine("Enter your selection: ");
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    void OnUserInput(string input)
+    {
+        print(input);
+    }
 }
