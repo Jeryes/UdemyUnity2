@@ -6,12 +6,11 @@ public class Hacker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        ShowMainMenu("Hello, Sombra");
+        ShowMainMenu();
     }
 
-    void ShowMainMenu (string greeting) {
+    void ShowMainMenu () {
         Terminal.ClearScreen();
-        Terminal.WriteLine(greeting);
         Terminal.WriteLine("What would you like to hack today?");
         Terminal.WriteLine("");
         Terminal.WriteLine("Press 1 for Snow White's Diary");
@@ -22,7 +21,31 @@ public class Hacker : MonoBehaviour {
     }
 
     void OnUserInput(string input)
-    {
-        print(input);
+    {            
+        if (input == "menu") {
+            ShowMainMenu();
+        }
+        else if (input == "69") {
+            Terminal.WriteLine("You nasty boy!");
+        }
+        else if (input == "mario") {
+            Terminal.WriteLine("▒▒▒▒▒▒▒▒▒▄▄▄▄▒▒▒▒▒▒▒");
+            Terminal.WriteLine("▒▒▒▒▒▒▄▀▀▓▓▓▓█▒▒▒▒▒▒");
+            Terminal.WriteLine("▒▒▒▒▄▀▓▓▄▄██████▄▒▒▒");
+            Terminal.WriteLine("▒▒▒▄█▄▄█▀░░▄░█▀▀▒▒▒▒");
+            Terminal.WriteLine("▒▒▒█░░██▄░░▀░▀▀▀▄▒▒▒");
+            Terminal.WriteLine("▒▒▒▀▄░░▀░▄█▄░░░▄▀▒▒▒");
+            Terminal.WriteLine("▒▒▒▒▄██▄░░░▀▀█▀▒▒▒▒▒");
+            Terminal.WriteLine("▒▒▒▄▀▓▓▀██▀▀▀▄▒▒▒▒▒▒");
+            Terminal.WriteLine("▒▒▒█▓▓▓▓█░░░░░█▒▒▒▒▒");
+            Terminal.WriteLine("▒▒▒██▄▓▓▓█▄▄▄█▀█▒▒▒▒");
+            Terminal.WriteLine("▒▒▒▒██████▄▄██▄█▒▒▒▒");
+            Terminal.WriteLine("▒▒▒▒███████████▒▒▒▒▒");
+            Terminal.WriteLine("▒▒▒▒▒█▀▀▀▀▀█▀▀▒▒▒▒▒▒");
+            Terminal.WriteLine("▒▒▒▒▒█▄▄▄▄▄▄█▒▒▒▒▒▒▒");
+        }
+        else {
+            Terminal.WriteLine("Please enter a valid selection.");
+        }
     }
 }
