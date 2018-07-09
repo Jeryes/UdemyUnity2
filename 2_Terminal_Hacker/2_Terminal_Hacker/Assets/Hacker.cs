@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Hacker : MonoBehaviour {
 
+    //Game Configuration Data
+    string[] level1passwords = { "bashful", "dopey", "grumpy", "sleepy", "sneezy" };
+    string[] level2passwords = { "mandrake", "hippogriff", "boggart", "thresnel", "niffler" };
+    string[] level3passwords = { "coalescence", "selfdestruct", "valkyrie", "tactical visor", "death blossom" };
+
     // Game State
     int level;
     string password;
@@ -48,14 +53,14 @@ public class Hacker : MonoBehaviour {
         if (input == "1")
         {
             level = 1;
-            password = "bashful";
+            password = level1passwords[2]; // TODO make random later
             StartGame();
             
         }
         else if (input == "2")
         {
             level = 2;
-            password = "mandrake";
+            password = level2passwords[1];
             StartGame();
         }
         else if (input == "69")
